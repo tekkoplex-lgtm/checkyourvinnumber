@@ -71,3 +71,38 @@
 @keyframes vinSheetUp{from{transform:translateY(100%);opacity:.6}to{transform:translateY(0);opacity:1}}
 @media(min-width:720px){.vin-install-backdrop{align-items:center!important;justify-content:center!important;padding:20px!important}.vin-install-modal{max-width:430px!important;border-radius:24px!important;max-height:85dvh!important}}
 @media(max-height:670px){.vin-install-modal{max-height:88dvh!important;padding-top:14px!important}.vin-install-modal .vin-install-brand{margin-bottom:8px!important}.vin-install-modal .vin-install-steps{gap:6px!important}}
+
+/* Unified visual language — enlarged identity and custom vehicle-history pictograms. */
+.vin-header{min-height:94px;height:auto;padding-top:12px;padding-bottom:12px}
+.vin-logo{gap:12px;font-size:clamp(20px,2.1vw,29px);letter-spacing:-1.15px}
+.vin-logo-symbol{width:60px;height:60px;flex:0 0 60px;border-radius:18px;font-size:41px}
+.vin-feature-icon,.vin-check-icon{width:66px;height:66px;border-radius:18px}
+.vin-feature-icon svg,.vin-check-icon svg{width:44px;height:44px;display:block;stroke-width:2.6}
+.vin-feature-cards article{transition:transform .2s,box-shadow .2s}
+.vin-feature-cards article:hover{transform:translateY(-3px);box-shadow:0 18px 42px #103d2420}
+.vin-feature-icon.theft,.vin-check-icon.green{color:#15803d;background:#e6f7ec}
+.vin-feature-icon.mileage,.vin-check-icon.amber{color:#167b48;background:#e9f7ef}
+.vin-feature-icon.damage,.vin-check-icon.red{color:#c5363b;background:#fff0ef}
+.vin-detail-heading{display:flex;align-items:center;gap:12px}
+.vin-detail-heading svg{width:33px;height:33px;flex:0 0 33px;color:#15803d}
+@media(max-width:760px){.vin-header{min-height:78px;padding:9px 13px;gap:6px}.vin-logo{gap:7px;font-size:clamp(15px,3.9vw,21px);letter-spacing:-.85px}.vin-logo-symbol{width:48px;height:48px;flex-basis:48px;border-radius:14px;font-size:34px}.vin-header-right{gap:5px}.vin-header-right button{padding:8px 10px}.vin-feature-icon,.vin-check-icon{width:62px;height:62px}.vin-feature-icon svg,.vin-check-icon svg{width:42px;height:42px}}
+@media(max-width:390px){.vin-logo{font-size:clamp(12px,3.6vw,15px);gap:6px}.vin-logo-symbol{width:44px;height:44px;flex-basis:44px;font-size:31px}.vin-header-right button{font-size:11px;padding:7px 8px}}
+
+/* User-requested clearly larger logo — 60% above original desktop size, prominent on mobile. */
+.vin-header{min-height:116px;gap:12px}
+.vin-logo{font-size:clamp(27px,2.9vw,37px)!important;gap:13px!important;letter-spacing:-1.6px!important;flex-shrink:0}
+.vin-logo-symbol{width:74px!important;height:74px!important;flex:0 0 74px!important;font-size:52px!important;border-radius:21px!important}
+@media(max-width:760px){.vin-header{min-height:91px;padding:10px 12px;gap:5px}.vin-logo{font-size:clamp(18px,4.8vw,24px)!important;gap:7px!important;letter-spacing:-1px!important}.vin-logo-symbol{width:59px!important;height:59px!important;flex-basis:59px!important;font-size:41px!important;border-radius:16px!important}.vin-header-right{gap:3px}.vin-header-right button{font-size:11px;padding:7px 8px}}
+@media(max-width:390px){.vin-logo{font-size:clamp(16px,4.35vw,19px)!important;gap:5px!important}.vin-logo-symbol{width:53px!important;height:53px!important;flex-basis:53px!important;font-size:37px!important}.vin-header-right button{font-size:10px;padding:6px}}
+
+/* Brand wordmark: increase text alone by 50%, keep checkmark size unchanged. */
+.vin-logo{font-size:clamp(40px,4.35vw,55px)!important;letter-spacing:-2.2px!important}
+@media(max-width:1100px){.vin-logo{font-size:clamp(25px,3.8vw,40px)!important;letter-spacing:-1.5px!important}}
+@media(max-width:760px){.vin-logo{font-size:clamp(20px,5.5vw,30px)!important;letter-spacing:-1.1px!important}}
+@media(max-width:390px){.vin-logo{font-size:clamp(17px,4.9vw,22px)!important;letter-spacing:-.9px!important}}
+
+/* Requested additional +60% wordmark enlargement (relative to preceding revision). */
+.vin-logo{font-size:clamp(64px,6.96vw,88px)!important;letter-spacing:-3.1px!important}
+@media(max-width:1100px){.vin-logo{font-size:clamp(40px,6.08vw,64px)!important;letter-spacing:-2.1px!important}}
+@media(max-width:760px){.vin-logo{font-size:clamp(27px,6.7vw,40px)!important;letter-spacing:-1.5px!important}.vin-header{flex-wrap:wrap;justify-content:center;gap:8px}.vin-logo{max-width:100%;min-width:0}.vin-logo>span:last-child{white-space:normal;overflow-wrap:anywhere;text-align:center}.vin-header-right{width:100%;justify-content:center}}
+@media(max-width:390px){.vin-logo{font-size:clamp(25px,6.45vw,32px)!important}}
