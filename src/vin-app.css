@@ -135,3 +135,10 @@
 .vin-pricing-grid>.vin-pricing-card:first-child{grid-column:1/-1;width:100%;max-width:560px;justify-self:center}
 .vin-pricing-grid>.vin-section-intro{grid-column:1/-1;margin:40px auto 8px;text-align:center;width:100%}
 @media(max-width:680px){.vin-pricing-grid{grid-template-columns:1fr}.vin-pricing-grid>.vin-section-intro{margin:30px auto 4px}.vin-pricing-grid>.vin-pricing-card:first-child{max-width:none}}
+
+/* Ghana mobile money options above pricing */
+.vin-payment-methods{max-width:920px;margin:0 auto 28px;text-align:center}
+.vin-payment-methods>span{display:block;color:#16844f;font-size:12px;letter-spacing:.15em;font-weight:800;margin-bottom:15px}
+.vin-payment-list{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.vin-payment-list span{background:#fff;border:1px solid #cce6d6;border-radius:999px;padding:12px 22px;color:#145a38;font-size:16px;font-weight:750;box-shadow:0 5px 16px rgba(8,70,42,.05)}
+@media(max-width:680px){.vin-payment-methods{margin-bottom:24px}.vin-payment-list{gap:8px}.vin-payment-list span{font-size:13px;padding:10px 13px}}
