@@ -43,3 +43,31 @@
 .test-site .test-status.warning,.test-site .test-status.danger{color:var(--danger)}
 .test-site a:hover{color:var(--brand-deep)}
 .test-site .test-logo:hover{color:#0f172a}
+
+/* Match the primary site's larger logo and consistent report pictograms. */
+.test-header{min-height:95px;height:auto;padding-top:12px;padding-bottom:12px}
+.test-logo{font-size:clamp(20px,2vw,29px);gap:12px;letter-spacing:-1.15px}
+.test-logo .test-logo-check{width:55px;height:55px;flex:0 0 55px;border-radius:17px;font-size:39px}
+.test-tabs button svg,.report-side nav button svg{width:22px;height:22px;vertical-align:middle;margin-right:5px;stroke-width:2.6}
+.premium-theft strong{display:inline-flex;align-items:center;gap:10px}
+.premium-theft strong svg{width:32px;height:32px;color:#15803d}
+.visual-damage-icon svg{width:33px;height:33px;color:#c5363b}
+@media(max-width:650px){.test-header{min-height:78px;padding:9px 12px}.test-logo{font-size:clamp(14px,3.8vw,19px);gap:7px}.test-logo .test-logo-check{width:43px;height:43px;flex-basis:43px;font-size:31px;border-radius:12px}}
+
+/* Match enlarged 60%-more-prominent brand on extended report. */
+.test-header{min-height:112px}
+.test-logo{font-size:clamp(27px,2.9vw,36px)!important;gap:13px!important;letter-spacing:-1.5px!important}
+.test-logo .test-logo-check{width:72px!important;height:72px!important;flex-basis:72px!important;font-size:51px!important;border-radius:20px!important}
+@media(max-width:650px){.test-header{min-height:88px;padding:9px 12px}.test-logo{font-size:clamp(17px,4.6vw,23px)!important;gap:6px!important;letter-spacing:-.8px!important}.test-logo .test-logo-check{width:54px!important;height:54px!important;flex-basis:54px!important;font-size:38px!important;border-radius:15px!important}}
+
+/* 50% larger brand wordmark text; keep existing checkmark dimensions. */
+.test-logo{font-size:clamp(40px,4.35vw,54px)!important;letter-spacing:-2.1px!important}
+@media(max-width:1100px){.test-logo{font-size:clamp(25px,3.8vw,39px)!important;letter-spacing:-1.5px!important}}
+@media(max-width:650px){.test-logo{font-size:clamp(19px,5.2vw,28px)!important;letter-spacing:-1px!important}}
+@media(max-width:390px){.test-logo{font-size:clamp(17px,4.8vw,21px)!important}}
+
+/* Requested additional +60% wordmark enlargement (relative to preceding revision). */
+.test-logo{font-size:clamp(64px,6.96vw,86px)!important;letter-spacing:-3px!important}
+@media(max-width:1100px){.test-logo{font-size:clamp(40px,6.08vw,62px)!important;letter-spacing:-2.1px!important}}
+@media(max-width:650px){.test-header{flex-wrap:wrap;justify-content:center;gap:8px}.test-logo{font-size:clamp(27px,6.7vw,38px)!important;letter-spacing:-1.3px!important;white-space:normal;max-width:100%;overflow-wrap:anywhere}.test-logo .test-logo-text{overflow-wrap:anywhere}.test-demo-tag{width:100%;text-align:center}}
+@media(max-width:390px){.test-logo{font-size:clamp(25px,6.45vw,32px)!important}}
