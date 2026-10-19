@@ -99,7 +99,7 @@ function VinHome() {
         <div className="vin-hero-inner">
           <div className="vin-overline"><span className="vin-green-dot" /> YOUR NEXT CAR DESERVES A CLOSER LOOK</div>
           <h1>Know the car.<br/><span>Before you buy.</span></h1>
-          <p className="vin-hero-sub">Check the story behind a vehicle in one simple report. Explore theft, mileage and accident history — all in one place.</p>
+          <p className="vin-hero-sub">Check the story behind the vehicle you’re about to buy, one simple report. Explore theft, mileage and accident history — all in one place.</p>
           <div className="vin-search-panel" id="check">
             <div className="vin-search-tabs" role="tablist" aria-label="Search type">
               <button type="button" role="tab" aria-selected={method === 'vin'} className={method === 'vin' ? 'selected' : ''} onClick={() => { setMethod('vin'); setError('') }}>VIN number</button>
