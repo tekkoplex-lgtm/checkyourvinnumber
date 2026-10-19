@@ -110,7 +110,7 @@ function VinHome() {
           </div>
           <div className="vin-hero-foot"><span>◇ No account needed for demo</span><span>◈ 3 essential checks</span><span>◎ Mobile-friendly report</span></div>
         </div>
-        <div className="vin-hero-art" aria-hidden="true"><div className="vin-hero-art-glow"/><img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=1400&q=85" alt="" /><div className="vin-hero-art-shade"/><div className="vin-floating-result"><span className="vin-floating-icon">✓</span><div><strong>Vehicle history</strong><small>One clear overview</small></div></div></div>
+        <div className="vin-hero-art" aria-hidden="true"><div className="vin-hero-art-glow"/><img src="https://assets.macaly-user-data.dev/cdn-cgi/image/format=webp,width=2000,height=2000,fit=scale-down,quality=85,anim=false/hk7vbisnfqwoghpqo5sykxw5/ijm16fx7vhseth1zvjh6drna/vTjXoF66lSSozBg1FgNXy.jpeg" alt="" /><div className="vin-hero-art-shade"/><div className="vin-floating-result"><span className="vin-floating-icon">✓</span><div><strong>Vehicle history</strong><small>One clear overview</small></div></div></div>
       </section>
       <section className="vin-three-checks">
         <div className="vin-section-intro"><span className="vin-eyebrow">EVERYTHING THAT MATTERS</span><h2>Three checks. <span>One confident decision.</span></h2><p>Designed to help you understand the most important parts of a used vehicle's history.</p></div>
