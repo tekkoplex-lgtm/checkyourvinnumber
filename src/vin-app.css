@@ -44,3 +44,42 @@
 .vin-damage-tag{background:#fee5e2!important;color:#b4232a!important;border-color:#f2a39e!important}
 .vin-search-error{background:#fff0ef;border:1px solid #e6a09a;color:#b4232a}
 .vin-report-disclaimer{border-left:4px solid #c62828}
+
+/* BOLD BRAND: deep crimson and emerald — no pastel red surfaces */
+.vin-app{--brand-red:#8b1025;--brand-red-dark:#650b1c;--brand-green:#15803d}
+.vin-header{border-bottom:4px solid #8b1025}
+.vin-header-right button{border:2px solid #8b1025;color:#8b1025;background:#fff}
+.vin-header-right button:hover{background:#8b1025;color:white}
+.vin-hero{background:linear-gradient(115deg,#f6fff8 0%,#fff 58%,#f7e9ed 100%)}
+.vin-overline{color:#8b1025}
+.vin-green-dot{background:#8b1025;box-shadow:0 0 0 5px #8b102526}
+.vin-hero h1 span{color:#8b1025}
+.vin-search-panel{border:2px solid #8b1025;box-shadow:0 20px 55px #650b1c1b}
+.vin-search-tabs button.selected{border-bottom-color:#8b1025;color:#8b1025}
+.vin-search-example button{border-color:#8b1025;color:#8b1025;background:#fff}
+.vin-search-example button span{color:#8b1025}
+.vin-hero-foot span:last-child{color:#8b1025;font-weight:850}
+.vin-three-checks .vin-section-intro h2 span{color:#8b1025}
+.vin-feature-cards article{border-top:5px solid #15803d}
+.vin-feature-cards article:nth-child(2){border-top-color:#8b1025}
+.vin-feature-cards article:last-child{background:#8b1025;border:2px solid #650b1c;border-top:5px solid #650b1c;box-shadow:0 18px 40px #650b1c2b}
+.vin-feature-cards article:last-child h3,.vin-feature-cards article:last-child p,.vin-feature-cards article:last-child>span{color:#fff}
+.vin-feature-cards article:last-child .vin-feature-icon.damage{background:#fff;color:#8b1025}
+.vin-sample-cta{background:linear-gradient(115deg,#650b1c 0%,#8b1025 58%,#133f2a 100%);border:2px solid #650b1c}
+.vin-sample-cta .vin-eyebrow,.vin-sample-cta h2 span{color:#fff}
+.vin-sample-cta>button{background:#fff;color:#8b1025;border:2px solid #fff}
+.vin-sample-cta>button:hover{background:#f4e5e9;color:#650b1c}
+.vin-footer{border-top:4px solid #8b1025}
+.vin-report-summary{background:linear-gradient(105deg,#123f2a 0%,#123f2a 58%,#8b1025 100%)}
+.vin-report-grid .vin-check-card:last-child{background:#8b1025;border:2px solid #650b1c;box-shadow:0 14px 34px #650b1c22}
+.vin-report-grid .vin-check-card:last-child h3,.vin-report-grid .vin-check-card:last-child p,.vin-report-grid .vin-check-card:last-child .vin-check-kicker,.vin-report-grid .vin-check-card:last-child .vin-check-link,.vin-report-grid .vin-check-card:last-child .vin-check-status{color:#fff}
+.vin-report-grid .vin-check-card:last-child .vin-check-link{border-top-color:#ffffff55}
+.vin-report-grid .vin-check-card:last-child .vin-check-status.alert{background:#650b1c;color:#fff}
+.vin-report-grid .vin-check-card:last-child .vin-check-icon.red{background:#fff;color:#8b1025}
+.vin-report-grid .vin-check-card:last-child:hover,.vin-report-grid .vin-check-card:last-child.is-active{border-color:#8b1025;box-shadow:0 18px 40px #650b1c40}
+.vin-damage-tag{background:#8b1025!important;color:#fff!important;border-color:#650b1c!important}
+.vin-damage-info h3{color:#8b1025}
+.vin-deeper-link{color:#8b1025}
+.vin-report-disclaimer{border-left:6px solid #8b1025}
+.vin-search-error{background:#8b1025;color:#fff;border-color:#650b1c}
+@media(max-width:760px){.vin-feature-cards article:last-child{background:#8b1025}.vin-report-grid .vin-check-card:last-child{background:#8b1025}}
