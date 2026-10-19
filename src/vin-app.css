@@ -28,3 +28,19 @@
 .vin-logo{max-width:100%;min-width:0}
 .vin-logo>span:last-child{white-space:nowrap}
 @media(max-width:430px){.vin-logo{font-size:clamp(12px,3.65vw,16px)}.vin-logo-symbol{flex:0 0 auto}}
+
+/* RED VISUAL ACCENTS — intentional red/green brand balance */
+.vin-feature-cards article:last-child{border:2px solid #f0aaa5;background:linear-gradient(155deg,#fff,#fff2f0)}
+.vin-feature-cards article:last-child h3,.vin-feature-cards article:last-child>span{color:#c62828}
+.vin-feature-icon.damage{background:#fee5e2;color:#c62828}
+.vin-three-checks .vin-section-intro h2 span{color:#c62828}
+.vin-sample-cta{background:linear-gradient(115deg,#123c2a 0%,#163f30 65%,#7c2428 100%);border:1px solid #ae4141}
+.vin-sample-cta .vin-eyebrow{color:#ffb4ae}
+.vin-sample-cta h2 span{color:#ffb4ae}
+.vin-report-grid .vin-check-card:last-child{border-color:#efaaa5;background:linear-gradient(160deg,#fff,#fff6f5)}
+.vin-report-grid .vin-check-card:last-child:hover,.vin-report-grid .vin-check-card:last-child.is-active{border-color:#c62828;box-shadow:0 12px 28px #c6282820}
+.vin-report-grid .vin-check-card:last-child .vin-check-kicker,.vin-report-grid .vin-check-card:last-child .vin-check-link{color:#c62828}
+.vin-report-grid .vin-check-card:last-child h3{color:#a61d24}
+.vin-damage-tag{background:#fee5e2!important;color:#b4232a!important;border-color:#f2a39e!important}
+.vin-search-error{background:#fff0ef;border:1px solid #e6a09a;color:#b4232a}
+.vin-report-disclaimer{border-left:4px solid #c62828}
