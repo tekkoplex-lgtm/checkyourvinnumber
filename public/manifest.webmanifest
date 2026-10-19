@@ -1,0 +1,17 @@
+{
+  "name": "CheckYourVINNumber",
+  "short_name": "CheckYourVIN",
+  "description": "Vehicle history checks",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#082e29",
+  "theme_color": "#082e29",
+  "icons": [
+    {
+      "src": "/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
