@@ -128,6 +128,7 @@ function VinHome() {
         </div>
       </section>
       <section className="vin-pricing" id="subscriptions">
+        <div className="vin-payment-methods" aria-label="Supported mobile money payment options"><span>PAYMENT OPTIONS</span><div className="vin-payment-list"><span>MTN MoMo</span><span>Telecel Cash</span><span>AT Money</span></div></div>
         <div className="vin-pricing-grid">
           <article className="vin-pricing-card"><span className="vin-plan-label">ONE-TIME REPORT</span><h3>Single Report</h3><p className="vin-plan-price">45 <small>GHC / report</small></p><p>Check <strong>1 vehicle</strong> with no monthly subscription.</p><div className="vin-plan-unit">One-time payment · No subscription required</div><button type="button" onClick={() => window.alert('Single-report payments are coming soon. Online payments and live vehicle data are not yet available.')}>Buy One Report →</button></article>
           <div className="vin-section-intro"><span className="vin-eyebrow">SIMPLE, FLEXIBLE PRICING</span><h2>Check more vehicles. <span>Save more.</span></h2><p>Pay for one report or choose a monthly plan. Prices in Ghanaian cedis (GHC).</p></div>
