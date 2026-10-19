@@ -112,3 +112,19 @@
 .vin-logo-symbol{width:46.8px!important;height:46.8px!important;flex:0 0 46.8px!important;font-size:32.76px!important;border-radius:9px!important}
 @media(max-width:760px){.vin-header{padding-left:7px!important}.vin-logo-symbol{width:37.44px!important;height:37.44px!important;flex-basis:37.44px!important;font-size:26.52px!important;border-radius:7px!important}}
 @media(max-width:390px){.vin-logo-symbol{width:34.32px!important;height:34.32px!important;flex-basis:34.32px!important;font-size:24.96px!important}}
+
+/* Monthly subscriptions */
+.vin-pricing{padding:88px 24px 80px;background:#f3f8f5;text-align:center}
+.vin-pricing-grid{max-width:920px;margin:36px auto 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;text-align:left}
+.vin-pricing-card{background:#fff;border:1px solid #d8e8de;border-radius:22px;padding:34px;box-shadow:0 12px 35px rgba(6,54,34,.06)}
+.vin-pricing-featured{border:2px solid #168b53;box-shadow:0 16px 40px rgba(6,94,50,.12)}
+.vin-plan-label{font-size:12px;font-weight:800;letter-spacing:.12em;color:#148450}
+.vin-pricing-card h3{font-size:28px;margin:14px 0 12px;color:#153a2b}
+.vin-plan-price{font-size:48px;font-weight:850;color:#0d5937;margin:0 0 16px;line-height:1.2}
+.vin-plan-price small{font-size:15px;font-weight:600;color:#66766d}
+.vin-pricing-card>p:not(.vin-plan-price){color:#52665b;font-size:16px}
+.vin-plan-unit{margin:18px 0 25px;color:#65796d;font-size:13px}
+.vin-pricing-card button{width:100%;padding:16px;border:0;border-radius:12px;background:#13894e;color:white;font-size:16px;font-weight:750;cursor:pointer}
+.vin-pricing-card button:hover{background:#096f3c}
+.vin-pricing-note{margin:22px auto 0;color:#63766a;font-size:13px}
+@media(max-width:680px){.vin-pricing{padding:56px 18px}.vin-pricing-grid{grid-template-columns:1fr;gap:16px}.vin-pricing-card{padding:26px}.vin-plan-price{font-size:40px}}
