@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default VinHome
 
@@ -10,6 +10,44 @@ const example = {
   vin: SAMPLE_VIN,
   plate: SAMPLE_PLATE,
   location: 'Ghana · Example vehicle',
+}
+
+
+function AddToHomeScreen() {
+  const [visible, setVisible] = useState(false)
+  const [inSafari, setInSafari] = useState(true)
+  useEffect(() => {
+    const ua = navigator.userAgent
+    const ios = /iPhone|iPod/i.test(ua)
+    const standalone = window.matchMedia('(display-mode: standalone)').matches || (navigator as Navigator & { standalone?: boolean }).standalone === true
+    const safari = /Safari/i.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS|DuckDuckGo/i.test(ua)
+    setInSafari(safari)
+    if (ios && !standalone) {
+      try { if (localStorage.getItem('cyvn-ios-install-tip-v1') !== 'seen') setVisible(true) } catch { setVisible(true) }
+    }
+  }, [])
+  function dismiss() {
+    setVisible(false)
+    try { localStorage.setItem('cyvn-ios-install-tip-v1', 'seen') } catch { /* storage unavailable */ }
+  }
+  if (!visible) return null
+  return <div className="vin-install-backdrop" role="presentation" onClick={dismiss}>
+    <section className="vin-install-modal" role="dialog" aria-modal="true" aria-labelledby="vin-install-title" onClick={e => e.stopPropagation()}>
+      <button className="vin-install-close" type="button" aria-label="Close guide" onClick={dismiss}>×</button>
+      <div className="vin-install-brand"><span>✓</span> CheckYour<strong>VIN</strong>Number</div>
+      <div className="vin-install-badge">IPHONE GUIDE</div>
+      <h2 id="vin-install-title">Save us to your Home Screen</h2>
+      <p className="vin-install-lead">Get back to CheckYourVINNumber in one tap — just like an app. No download needed.</p>
+      {!inSafari && <div className="vin-install-safari-note"><strong>First, open in Safari.</strong> Tap the browser menu and choose “Open in Safari”, or copy this page's link into Safari.</div>}
+      <ol className="vin-install-steps">
+        <li><span className="vin-install-step-icon">⇧</span><div><strong>1. Tap Share</strong><p>In Safari, tap the Share icon <b>□↑</b> in the toolbar.</p></div></li>
+        <li><span className="vin-install-step-icon">＋</span><div><strong>2. Add to Home Screen</strong><p>Scroll down in the Share menu and select <b>“Add to Home Screen”.</b></p></div></li>
+        <li><span className="vin-install-step-icon">✓</span><div><strong>3. Tap Add</strong><p>Confirm in the top-right corner. The shortcut will appear on your iPhone.</p></div></li>
+      </ol>
+      <button type="button" className="vin-install-done" onClick={dismiss}>Got it, thanks! ✓</button>
+      <p className="vin-install-note">This guide appears only on your first visit on iPhone.</p>
+    </section>
+  </div>
 }
 
 function VinHome() {
@@ -40,7 +78,7 @@ function VinHome() {
     setError('')
   }
 
-  return <div className="vin-app">
+  return <div className="vin-app"><AddToHomeScreen />
     <header className="vin-header">
       <a className="vin-logo" href="/" onClick={e => { e.preventDefault(); setReport(false); setError(''); window.scrollTo({ top: 0, behavior: 'smooth' }) }}>
         <span className="vin-logo-symbol">✓</span>
