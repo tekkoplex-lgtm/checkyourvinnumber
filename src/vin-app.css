@@ -129,3 +129,9 @@
 .vin-pricing-note{margin:22px auto 0;color:#63766a;font-size:13px}
 @media(max-width:960px) and (min-width:681px){.vin-pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:680px){.vin-pricing{padding:56px 18px}.vin-pricing-grid{grid-template-columns:1fr;gap:16px}.vin-pricing-card{padding:26px}.vin-plan-price{font-size:40px}}
+
+/* Single report first; subscription headline and plans follow */
+.vin-pricing-grid{max-width:920px;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+.vin-pricing-grid>.vin-pricing-card:first-child{grid-column:1/-1;width:100%;max-width:560px;justify-self:center}
+.vin-pricing-grid>.vin-section-intro{grid-column:1/-1;margin:40px auto 8px;text-align:center;width:100%}
+@media(max-width:680px){.vin-pricing-grid{grid-template-columns:1fr}.vin-pricing-grid>.vin-section-intro{margin:30px auto 4px}.vin-pricing-grid>.vin-pricing-card:first-child{max-width:none}}
