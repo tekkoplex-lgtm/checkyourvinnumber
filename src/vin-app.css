@@ -142,3 +142,11 @@
 .vin-payment-list{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
 .vin-payment-list span{background:#fff;border:1px solid #cce6d6;border-radius:999px;padding:12px 22px;color:#145a38;font-size:16px;font-weight:750;box-shadow:0 5px 16px rgba(8,70,42,.05)}
 @media(max-width:680px){.vin-payment-methods{margin-bottom:24px}.vin-payment-list{gap:8px}.vin-payment-list span{font-size:13px;padding:10px 13px}}
+
+/* Clearly visible payment strip in gap between feature checks and pricing */
+.vin-payment-strip{background:#edf7f0;padding:38px 20px 16px;text-align:center}
+.vin-payment-strip-inner{max-width:900px;margin:auto;background:#fff;border:2px solid #b9dfc9;border-radius:22px;padding:24px 18px;box-shadow:0 10px 28px rgba(6,67,37,.08)}
+.vin-payment-strip-inner>strong{display:block;color:#13844d;font-size:14px;letter-spacing:.14em;margin-bottom:18px}
+.vin-payment-strip .vin-payment-list span{background:#e9f7ed;border:1px solid #a9d9bb;font-weight:800;color:#0d6039}
+.vin-pricing{padding-top:28px}
+@media(max-width:680px){.vin-payment-strip{padding:26px 16px 8px}.vin-payment-strip-inner{padding:20px 12px}.vin-payment-strip .vin-payment-list{gap:8px}.vin-payment-strip .vin-payment-list span{font-size:13px;padding:11px 12px}}
