@@ -43,17 +43,3 @@
 .test-site .test-status.warning,.test-site .test-status.danger{color:var(--danger)}
 .test-site a:hover{color:var(--brand-deep)}
 .test-site .test-logo:hover{color:#0f172a}
-
-/* Deep burgundy and emerald brand — extended demo */
-.test-header{border-bottom:4px solid #8b1025}
-.test-site .test-eyebrow{color:#8b1025}
-.test-site .test-hero h1 em,.test-site .premium-report-heading h1 em{color:#8b1025}
-.test-site .test-search>div{border:2px solid #8b1025}
-.test-site .test-tabs button.active{color:#8b1025;border-bottom-color:#8b1025}
-.test-site .test-bottom{background:linear-gradient(110deg,#650b1c,#8b1025 65%,#133f2a);color:#fff}
-.test-site .test-bottom h2,.test-site .test-bottom p{color:#fff}
-.test-site .test-bottom button{background:#fff;color:#8b1025}
-.test-site .premium-damage-warning,.test-site .test-alert-note{background:#8b1025;color:#fff;border-color:#650b1c}
-.test-site .test-status.warning,.test-site .test-status.danger{color:#8b1025}
-.test-site .test-summary-alert{border-left:6px solid #8b1025}
-.test-site .test-report-footer{border-top:3px solid #8b1025}
