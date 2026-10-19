@@ -127,6 +127,13 @@ function VinHome() {
           <article><div className="vin-feature-icon damage"><VehicleCheckIcon kind="damage" /></div><h3>Accident &amp; damage check</h3><p>Explore accident records, damage areas and illustrative repair information.</p><span>03 / DAMAGE HISTORY</span></article>
         </div>
       </section>
+      <section className="vin-pricing" id="subscriptions">
+        <div className="vin-section-intro"><span className="vin-eyebrow">SIMPLE MONTHLY PLANS</span><h2>Check more vehicles. <span>Save more.</span></h2><p>Choose the monthly plan that works for you. Prices in Ghanaian cedis (GHC).</p></div>
+        <div className="vin-pricing-grid">
+          <article className="vin-pricing-card"><span className="vin-plan-label">BASIC SUBSCRIPTION</span><h3>Basic</h3><p className="vin-plan-price">189 <small>GHC / month</small></p><p>Check up to <strong>10 vehicles</strong> every month.</p><div className="vin-plan-unit">18.90 GHC per vehicle when fully used</div><button type="button" onClick={() => window.alert('Subscriptions are coming soon. Online payments are not yet available.')}>Subscribe Now →</button></article>
+          <article className="vin-pricing-card vin-pricing-featured"><span className="vin-plan-label">BEST VALUE</span><h3>Premium</h3><p className="vin-plan-price">289 <small>GHC / month</small></p><p>Check up to <strong>20 vehicles</strong> every month.</p><div className="vin-plan-unit">14.45 GHC per vehicle when fully used</div><button type="button" onClick={() => window.alert('Subscriptions are coming soon. Online payments are not yet available.')}>Subscribe Now →</button></article>
+        </div><p className="vin-pricing-note">Coming soon · Subscription payments and live vehicle data are not yet connected.</p>
+      </section>
       <section className="vin-sample-cta"><div><span className="vin-eyebrow">SEE HOW IT WORKS</span><h2>Try a real-feeling report.<br/><span>With fictional data.</span></h2><p>We've prepared a Toyota Hilux 4x4 example so you can explore the full experience.</p></div><button type="button" onClick={() => { setMethod('vin'); setQuery(SAMPLE_VIN); setReport(true); setSearchCompleted(true); setActive(null); window.scrollTo({ top: 0, behavior: 'smooth' }) }}>Open sample report <span>↗</span></button></section>
     </main> : <main className="vin-report-page">
       <div className="vin-report-shell">
