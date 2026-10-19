@@ -44,7 +44,7 @@ function VinHome() {
     <header className="vin-header">
       <a className="vin-logo" href="/" onClick={e => { e.preventDefault(); setReport(false); setError(''); window.scrollTo({ top: 0, behavior: 'smooth' }) }}>
         <span className="vin-logo-symbol">✓</span>
-        <span>CheckYour<span className="vin-logo-blue">VIN</span>Number<span className="vin-logo-com">.com</span></span>
+        <span>CheckYour<span className="vin-logo-blue">VIN</span>Number</span>
       </a>
       <div className="vin-header-right"><span className="vin-demo-label">INTERACTIVE CONCEPT DEMO</span><button type="button" onClick={() => { setReport(false); setError(''); window.scrollTo({ top: 0, behavior: 'smooth' }) }}>{report ? '← New check' : 'Home'}</button></div>
     </header>
