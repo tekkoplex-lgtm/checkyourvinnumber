@@ -109,6 +109,6 @@
 
 /* Logo refinement: 60% smaller checkmark, wordmark remains large, align further left. */
 .vin-header{max-width:none!important;padding-left:clamp(8px,1.1vw,16px)!important}
-.vin-logo-symbol{width:30px!important;height:30px!important;flex:0 0 30px!important;font-size:21px!important;border-radius:9px!important}
-@media(max-width:760px){.vin-header{padding-left:7px!important}.vin-logo-symbol{width:24px!important;height:24px!important;flex-basis:24px!important;font-size:17px!important;border-radius:7px!important}}
-@media(max-width:390px){.vin-logo-symbol{width:22px!important;height:22px!important;flex-basis:22px!important;font-size:16px!important}}
+.vin-logo-symbol{width:46.8px!important;height:46.8px!important;flex:0 0 46.8px!important;font-size:32.76px!important;border-radius:9px!important}
+@media(max-width:760px){.vin-header{padding-left:7px!important}.vin-logo-symbol{width:37.44px!important;height:37.44px!important;flex-basis:37.44px!important;font-size:26.52px!important;border-radius:7px!important}}
+@media(max-width:390px){.vin-logo-symbol{width:34.32px!important;height:34.32px!important;flex-basis:34.32px!important;font-size:24.96px!important}}
