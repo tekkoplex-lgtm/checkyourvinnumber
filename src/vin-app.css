@@ -160,3 +160,5 @@
 .vin-payment-mtn strong{color:#103f59;font-size:19px;font-weight:900;letter-spacing:-.04em}
 .vin-payment-mtn small{color:#103f59}
 @media(max-width:680px){.vin-payment-strip .vin-payment-list{gap:7px}.vin-payment-brand{padding:8px 4px;min-height:96px}.vin-payment-brand img{height:48px}.vin-payment-brand small{font-size:10px}.vin-payment-mtn strong{font-size:14px}}
+
+.vin-payment-telecel{background:#fff7f7;border-color:#f0d4d4}.vin-telecel-wordmark{font-size:23px;font-weight:900;letter-spacing:-.075em;color:#df2636;line-height:1}.vin-telecel-wordmark span{color:#df2636}@media(max-width:680px){.vin-telecel-wordmark{font-size:18px}}
