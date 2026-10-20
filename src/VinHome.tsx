@@ -1,8 +1,10 @@
+import { ConvexHttpClient } from 'convex/browser'
 import { useEffect, useState } from 'react'
 import { VehicleCheckIcon } from './components/VehicleCheckIcon'
 
 export default VinHome
 
+const vinClient = new ConvexHttpClient('https://tacit-scorpion-614.eu-west-1.convex.cloud')
 const SAMPLE_VIN = 'AHTKB3CD0K0000002'
 const SAMPLE_PLATE = 'DEMO4X4'
 const example = {
@@ -56,6 +58,8 @@ function AddToHomeScreen({ searchCompleted }: { searchCompleted: boolean }) {
 }
 
 function VinHome() {
+  const [live, setLive] = useState<{vin:string;year:string|null;make:string|null;model:string|null;trim:string|null;bodyStyle:string|null;drivetrain:string|null;fuel:string|null;transmission:string|null;engine:string|null;source:string}|null>(null)
+  const [loading, setLoading] = useState(false)
   const [method, setMethod] = useState<'vin' | 'plate'>('vin')
   const [query, setQuery] = useState('')
   const [report, setReport] = useState(false)
@@ -63,20 +67,18 @@ function VinHome() {
   const [error, setError] = useState('')
   const [active, setActive] = useState<'theft' | 'mileage' | 'damage' | null>(null)
 
-  function submit(e: React.FormEvent) {
+  async function submit(e: React.FormEvent) {
     e.preventDefault()
-    const value = query.trim().toUpperCase().replace(/\s+/g, '')
-    if (value === SAMPLE_VIN || value === SAMPLE_PLATE) {
-      setReport(true)
-      setSearchCompleted(true)
-      setError('')
-      setActive(null)
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-    } else {
-      setError(method === 'vin'
-        ? 'This is a demo. Enter the example VIN below to open the sample report. Live VIN checks are not connected yet.'
-        : 'This is a demo. Enter DEMO4X4 to open the sample report. Live plate checks are not connected yet.')
-    }
+    const value = query.trim().toUpperCase().replace(/\\s+/g, '')
+    if (method === 'plate') { setError('License plate searches are not connected yet. Please enter a 17-character VIN.'); return }
+    if (value === SAMPLE_VIN) { setLive(null); setReport(true); setSearchCompleted(true); setError(''); setActive(null); window.scrollTo({top:0,behavior:'smooth'}); return }
+    if (!/^[A-HJ-NPR-Z0-9]{17}$/.test(value)) { setError('Please enter a valid 17-character VIN.'); return }
+    setLoading(true); setError(''); setLive(null)
+    try {
+      const result = await vinClient.action('vehicle:decodeVin' as any, {vin:value})
+      setLive(result); setReport(false); setSearchCompleted(true)
+    } catch (err) { setError(err instanceof Error ? err.message.replace(/^.*Uncaught Error: /s,'').slice(0,220) : 'Vehicle lookup unavailable. Please try again.') }
+    finally { setLoading(false) }
   }
 
   function useExample() {
@@ -109,10 +111,11 @@ function VinHome() {
               <div className="vin-search-input-wrap">
                 <span className="vin-input-icon">⌕</span>
                 <input aria-label={method === 'vin' ? 'VIN number' : 'License plate'} value={query} onChange={e => { setQuery(e.target.value.toUpperCase()); setError('') }} placeholder={method === 'vin' ? 'Enter 17-character VIN number' : 'Enter license plate number'} maxLength={method === 'vin' ? 17 : 16} autoComplete="off" />
-                <button type="submit">Check vehicle <span>→</span></button>
+                <button type="submit" disabled={loading}>{loading ? "Checking..." : "Check vehicle"} <span>→</span></button>
               </div>
             </form>
             {error && <div className="vin-search-error" role="alert">{error}</div>}
+            {live && <section role="status" style={{padding:20,background:'#ecfdf5',border:'1px solid #86efac',borderRadius:14,marginTop:16,color:'#12372a'}}><strong>REAL VIN IDENTITY RESULT</strong><h2 style={{margin:'10px 0'}}>{[live.year,live.make,live.model].filter(Boolean).join(' ')}</h2><p>VIN: {live.vin}</p><p>{[live.trim,live.bodyStyle,live.drivetrain,live.fuel,live.transmission,live.engine].filter(Boolean).join(' · ')}</p><small>Source: {live.source}. Vehicle identity only. Theft, accident and mileage history have NOT been checked.</small></section>}
             <div className="vin-search-example"><span>TRY A FREE SAMPLE</span><button type="button" onClick={useExample}>{SAMPLE_VIN} <span>↗</span></button></div>
           </div>
           <div className="vin-hero-foot"><span>◇ No account needed for demo</span><span>◈ 3 essential checks</span><span>◎ Mobile-friendly report</span></div>
