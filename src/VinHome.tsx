@@ -128,7 +128,7 @@ function VinHome() {
         </div>
       </section>
       <section className="vin-payment-strip" aria-label="Available mobile money methods">
-        <div className="vin-payment-strip-inner"><strong>PAYMENT OPTIONS</strong><div className="vin-payment-list"><span>MTN MoMo</span><span>Telecel Cash</span><span>AT Money</span></div></div>
+        <div className="vin-payment-strip-inner"><strong>PAYMENT OPTIONS</strong><div className="vin-payment-list"><div className="vin-payment-brand vin-payment-mtn"><strong>MTN MoMo</strong><small>Mobile Money</small></div><div className="vin-payment-brand"><img src="https://www.inclusiontimes.com/content/images/2024/05/Telecel-cash-iT.jpeg" alt="Telecel Cash logo" loading="lazy" /><small>Telecel Cash</small></div><div className="vin-payment-brand"><img src="https://tuameka.com/images/at_money.png" alt="AT Money logo" loading="lazy" /><small>AT Money</small></div></div></div>
       </section>
       <section className="vin-pricing" id="subscriptions">
         <div className="vin-pricing-grid">
