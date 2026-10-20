@@ -150,3 +150,13 @@
 .vin-payment-strip .vin-payment-list span{background:#e9f7ed;border:1px solid #a9d9bb;font-weight:800;color:#0d6039}
 .vin-pricing{padding-top:28px}
 @media(max-width:680px){.vin-payment-strip{padding:26px 16px 8px}.vin-payment-strip-inner{padding:20px 12px}.vin-payment-strip .vin-payment-list{gap:8px}.vin-payment-strip .vin-payment-list span{font-size:13px;padding:11px 12px}}
+
+/* Genuine mobile money branding cards */
+.vin-payment-strip .vin-payment-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.vin-payment-brand{min-width:0;min-height:116px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;padding:12px;background:#fff;border:1px solid #e3eae6;border-radius:16px;overflow:hidden}
+.vin-payment-brand img{width:100%;max-width:155px;height:64px;object-fit:contain;border-radius:6px}
+.vin-payment-brand small{font-size:12px;font-weight:750;color:#516459}
+.vin-payment-mtn{background:#ffcc00;border-color:#f2bd00}
+.vin-payment-mtn strong{color:#103f59;font-size:19px;font-weight:900;letter-spacing:-.04em}
+.vin-payment-mtn small{color:#103f59}
+@media(max-width:680px){.vin-payment-strip .vin-payment-list{gap:7px}.vin-payment-brand{padding:8px 4px;min-height:96px}.vin-payment-brand img{height:48px}.vin-payment-brand small{font-size:10px}.vin-payment-mtn strong{font-size:14px}}
